@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Велосипед для розуму в епоху шуму. Дивись крізь шум до правди."
+  },
+  "tagline": {
+    "message": "Дивись крізь шум до правди"
+  },
+  "labelModel": {
+    "message": "Модель ШІ"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (За замовчуванням)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "API-ключ OpenRouter"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Глибоке мислення"
+  },
+  "descThinking": {
+    "message": "Повільніше, але ретельніший аналіз"
+  },
+  "labelLanguage": {
+    "message": "Мова відповіді"
+  },
+  "langAuto": {
+    "message": "Авто (За замовчуванням браузера)"
+  },
+  "btnSave": {
+    "message": "Зберегти налаштування"
+  },
+  "instructionsTitle": {
+    "message": "Як користуватися"
+  },
+  "instructionsText": {
+    "message": "Виділіть будь-який текст на веб-сторінці, клацніть правою кнопкою миші та виберіть <code>💡 Lens</code> для миттєвого аналізу."
+  },
+  "apiLinkText": {
+    "message": "Отримайте API-ключ на <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Будь ласка, введіть API-ключ"
+  },
+  "errorInvalidApiKey": {
+    "message": "API-ключі OpenRouter повинні починатися з \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Налаштування успішно збережено"
+  },
+  "statusError": {
+    "message": "Не вдалося зберегти налаштування"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Думаю"
+  }
+}

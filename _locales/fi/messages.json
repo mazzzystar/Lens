@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Polkupyörä mielelle meluisan aikakaudella. Näe melun läpi totuuteen."
+  },
+  "tagline": {
+    "message": "Näe melun läpi totuuteen"
+  },
+  "labelModel": {
+    "message": "AI-malli"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Oletus)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API-avain"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Syvä ajattelu"
+  },
+  "descThinking": {
+    "message": "Hitaampi mutta perusteellisempi analyysi"
+  },
+  "labelLanguage": {
+    "message": "Vastauksen kieli"
+  },
+  "langAuto": {
+    "message": "Auto (Selaimen oletus)"
+  },
+  "btnSave": {
+    "message": "Tallenna asetukset"
+  },
+  "instructionsTitle": {
+    "message": "Käyttöohjeet"
+  },
+  "instructionsText": {
+    "message": "Valitse mikä tahansa teksti verkkosivulla, napsauta hiiren oikealla painikkeella ja valitse <code>💡 Lens</code> saadaksesi välittömän näkemyksen."
+  },
+  "apiLinkText": {
+    "message": "Hanki API-avaimesi osoitteesta <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Anna API-avain"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API-avainten on alettava \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Asetukset tallennettu"
+  },
+  "statusError": {
+    "message": "Asetusten tallentaminen epäonnistui"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Ajattelen"
+  }
+}

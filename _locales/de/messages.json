@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Ein Fahrrad für den Geist im Zeitalter des Lärms. Durch den Lärm zur Wahrheit sehen."
+  },
+  "tagline": {
+    "message": "Durch den Lärm zur Wahrheit sehen"
+  },
+  "labelModel": {
+    "message": "KI-Modell"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Standard)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API-Schlüssel"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Tiefes Denken"
+  },
+  "descThinking": {
+    "message": "Langsamer aber gründlichere Analyse"
+  },
+  "labelLanguage": {
+    "message": "Antwortsprache"
+  },
+  "langAuto": {
+    "message": "Auto (Browser-Standard)"
+  },
+  "btnSave": {
+    "message": "Einstellungen speichern"
+  },
+  "instructionsTitle": {
+    "message": "Verwendung"
+  },
+  "instructionsText": {
+    "message": "Wählen Sie Text auf einer Webseite aus, klicken Sie mit der rechten Maustaste und wählen Sie <code>💡 Lens</code> für sofortige Einblicke."
+  },
+  "apiLinkText": {
+    "message": "Holen Sie sich Ihren API-Schlüssel bei <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Bitte geben Sie einen API-Schlüssel ein"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API-Schlüssel müssen mit \"sk-or-\" beginnen"
+  },
+  "statusSaved": {
+    "message": "Einstellungen erfolgreich gespeichert"
+  },
+  "statusError": {
+    "message": "Speichern der Einstellungen fehlgeschlagen"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Denke nach"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Isang bisikleta para sa isip sa panahon ng ingay. Makita ang katotohanan sa kabila ng ingay."
+  },
+  "tagline": {
+    "message": "Makita ang katotohanan sa kabila ng ingay"
+  },
+  "labelModel": {
+    "message": "Modelo ng AI"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Default)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API Key"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Malalim na Pag-iisip"
+  },
+  "descThinking": {
+    "message": "Mas mabagal ngunit mas masusing pagsusuri"
+  },
+  "labelLanguage": {
+    "message": "Wika ng Tugon"
+  },
+  "langAuto": {
+    "message": "Auto (Default ng Browser)"
+  },
+  "btnSave": {
+    "message": "I-save ang mga Setting"
+  },
+  "instructionsTitle": {
+    "message": "Paano Gamitin"
+  },
+  "instructionsText": {
+    "message": "Pumili ng anumang teksto sa isang webpage, i-right-click, at piliin ang <code>💡 Lens</code> para makakuha ng instant na insight."
+  },
+  "apiLinkText": {
+    "message": "Kunin ang iyong API key sa <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Mangyaring maglagay ng API key"
+  },
+  "errorInvalidApiKey": {
+    "message": "Ang mga OpenRouter API key ay dapat magsimula sa \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Matagumpay na nai-save ang mga setting"
+  },
+  "statusError": {
+    "message": "Nabigong i-save ang mga setting"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Nag-iisip"
+  }
+}

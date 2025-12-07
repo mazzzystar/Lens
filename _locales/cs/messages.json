@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Kolo pro mysl v době hluku. Podívej se skrz hluk k pravdě."
+  },
+  "tagline": {
+    "message": "Podívej se skrz hluk k pravdě"
+  },
+  "labelModel": {
+    "message": "AI Model"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Výchozí)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API klíč"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Hluboké myšlení"
+  },
+  "descThinking": {
+    "message": "Pomalejší, ale důkladnější analýza"
+  },
+  "labelLanguage": {
+    "message": "Jazyk odpovědi"
+  },
+  "langAuto": {
+    "message": "Auto (Výchozí prohlížeče)"
+  },
+  "btnSave": {
+    "message": "Uložit nastavení"
+  },
+  "instructionsTitle": {
+    "message": "Jak používat"
+  },
+  "instructionsText": {
+    "message": "Vyberte jakýkoli text na webové stránce, klikněte pravým tlačítkem a vyberte <code>💡 Lens</code> pro okamžitý vhled."
+  },
+  "apiLinkText": {
+    "message": "Získejte svůj API klíč na <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Prosím zadejte API klíč"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API klíče musí začínat \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Nastavení úspěšně uloženo"
+  },
+  "statusError": {
+    "message": "Nepodařilo se uložit nastavení"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Přemýšlím"
+  }
+}

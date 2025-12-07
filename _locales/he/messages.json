@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "אופניים לנפש בעידן הרעש. ראה דרך הרעש אל האמת."
+  },
+  "tagline": {
+    "message": "ראה דרך הרעש אל האמת"
+  },
+  "labelModel": {
+    "message": "מודל AI"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (ברירת מחדל)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "מפתח API של OpenRouter"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "חשיבה עמוקה"
+  },
+  "descThinking": {
+    "message": "איטי יותר אך ניתוח יסודי יותר"
+  },
+  "labelLanguage": {
+    "message": "שפת תגובה"
+  },
+  "langAuto": {
+    "message": "אוטומטי (ברירת מחדל של דפדפן)"
+  },
+  "btnSave": {
+    "message": "שמור הגדרות"
+  },
+  "instructionsTitle": {
+    "message": "איך להשתמש"
+  },
+  "instructionsText": {
+    "message": "בחר טקסט כלשהו בדף אינטרנט, לחץ לחיצה ימנית ובחר <code>💡 Lens</code> לתובנה מיידית."
+  },
+  "apiLinkText": {
+    "message": "קבל את מפתח ה-API שלך ב-<a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "אנא הזן מפתח API"
+  },
+  "errorInvalidApiKey": {
+    "message": "מפתחות API של OpenRouter חייבים להתחיל ב-\"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "ההגדרות נשמרו בהצלחה"
+  },
+  "statusError": {
+    "message": "שמירת ההגדרות נכשלה"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "חושב"
+  }
+}

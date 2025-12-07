@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "噪音时代的思维单车。透过噪音，看见真相。"
+  },
+  "tagline": {
+    "message": "透过噪音，看见真相"
+  },
+  "labelModel": {
+    "message": "AI 模型"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro（默认）"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API 密钥"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "深度思考"
+  },
+  "descThinking": {
+    "message": "更慢但更深入的分析"
+  },
+  "labelLanguage": {
+    "message": "回复语言"
+  },
+  "langAuto": {
+    "message": "自动（浏览器默认）"
+  },
+  "btnSave": {
+    "message": "保存设置"
+  },
+  "instructionsTitle": {
+    "message": "使用方法"
+  },
+  "instructionsText": {
+    "message": "在网页上选择任意文本，右键点击，选择 <code>💡 Lens</code> 即可获得即时洞察。"
+  },
+  "apiLinkText": {
+    "message": "在 <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a> 获取 API 密钥"
+  },
+  "errorNoApiKey": {
+    "message": "请输入 API 密钥"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API 密钥应以 \"sk-or-\" 开头"
+  },
+  "statusSaved": {
+    "message": "设置保存成功"
+  },
+  "statusError": {
+    "message": "保存设置失败"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "思考中"
+  }
+}

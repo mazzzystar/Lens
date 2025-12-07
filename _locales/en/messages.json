@@ -1,0 +1,90 @@
+{
+  "extName": {
+    "message": "Lens",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "A Bicycle for the Mind in the Age of Noise. See through the noise to the truth.",
+    "description": "Extension description"
+  },
+  "tagline": {
+    "message": "See through the noise to the truth",
+    "description": "Tagline shown in popup"
+  },
+  "labelModel": {
+    "message": "AI Model",
+    "description": "Label for model selector"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Default)",
+    "description": "Gemini model option"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus",
+    "description": "Claude model option"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API Key",
+    "description": "Label for API key input"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-...",
+    "description": "Placeholder for API key input"
+  },
+  "labelThinking": {
+    "message": "Deep Thinking",
+    "description": "Label for thinking toggle"
+  },
+  "descThinking": {
+    "message": "Slower but more thorough analysis",
+    "description": "Description for thinking toggle"
+  },
+  "labelLanguage": {
+    "message": "Response Language",
+    "description": "Label for language selector"
+  },
+  "langAuto": {
+    "message": "Auto (Browser Default)",
+    "description": "Auto language option"
+  },
+  "btnSave": {
+    "message": "Save Settings",
+    "description": "Save button text"
+  },
+  "instructionsTitle": {
+    "message": "How to use",
+    "description": "Instructions section title"
+  },
+  "instructionsText": {
+    "message": "Select any text on a webpage, right-click, and choose <code>💡 Lens</code> to get instant insight.",
+    "description": "Instructions text"
+  },
+  "apiLinkText": {
+    "message": "Get your API key at <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>",
+    "description": "API link text"
+  },
+  "errorNoApiKey": {
+    "message": "Please enter an API key",
+    "description": "Error when no API key"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API keys should start with \"sk-or-\"",
+    "description": "Error for invalid API key format"
+  },
+  "statusSaved": {
+    "message": "Settings saved successfully",
+    "description": "Success message"
+  },
+  "statusError": {
+    "message": "Failed to save settings",
+    "description": "Error message"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens",
+    "description": "Context menu item title"
+  },
+  "loadingText": {
+    "message": "Thinking",
+    "description": "Loading state text"
+  }
+}

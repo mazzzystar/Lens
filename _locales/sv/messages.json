@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "En cykel för sinnet i brusets tidsålder. Se genom bruset till sanningen."
+  },
+  "tagline": {
+    "message": "Se genom bruset till sanningen"
+  },
+  "labelModel": {
+    "message": "AI-modell"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Standard)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API-nyckel"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Djupt tänkande"
+  },
+  "descThinking": {
+    "message": "Långsammare men grundligare analys"
+  },
+  "labelLanguage": {
+    "message": "Svarsspråk"
+  },
+  "langAuto": {
+    "message": "Auto (Webbläsarstandard)"
+  },
+  "btnSave": {
+    "message": "Spara inställningar"
+  },
+  "instructionsTitle": {
+    "message": "Hur man använder"
+  },
+  "instructionsText": {
+    "message": "Välj valfri text på en webbsida, högerklicka och välj <code>💡 Lens</code> för omedelbar insikt."
+  },
+  "apiLinkText": {
+    "message": "Hämta din API-nyckel på <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Vänligen ange en API-nyckel"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API-nycklar måste börja med \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Inställningar sparade"
+  },
+  "statusError": {
+    "message": "Kunde inte spara inställningar"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Tänker"
+  }
+}

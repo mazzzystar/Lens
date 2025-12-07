@@ -237,26 +237,26 @@
 <body>
   <div class="header">
     <div class="logo">◉ Lens</div>
-    <div class="tagline">See through the noise to the truth</div>
+    <div class="tagline" data-i18n="tagline">See through the noise to the truth</div>
   </div>
 
   <div class="form-group">
-    <label for="model">AI Model</label>
+    <label for="model" data-i18n="labelModel">AI Model</label>
     <select id="model">
-      <option value="gemini-3-pro">Gemini 3 Pro (Default)</option>
-      <option value="claude-4-opus">Claude 4 Opus</option>
+      <option value="gemini-3-pro" data-i18n="modelGemini">Gemini 3 Pro (Default)</option>
+      <option value="claude-4-opus" data-i18n="modelClaude">Claude 4 Opus</option>
     </select>
   </div>
 
   <div class="form-group">
-    <label for="apiKey">OpenRouter API Key</label>
-    <input type="password" id="apiKey" placeholder="sk-or-v1-...">
+    <label for="apiKey" data-i18n="labelApiKey">OpenRouter API Key</label>
+    <input type="password" id="apiKey" data-i18n-placeholder="placeholderApiKey" placeholder="sk-or-v1-...">
   </div>
 
   <div class="toggle-group">
     <div class="toggle-label">
-      <span class="toggle-title">Deep Thinking</span>
-      <span class="toggle-desc">Slower but more thorough analysis</span>
+      <span class="toggle-title" data-i18n="labelThinking">Deep Thinking</span>
+      <span class="toggle-desc" data-i18n="descThinking">Slower but more thorough analysis</span>
     </div>
     <label class="toggle-switch">
       <input type="checkbox" id="enableThinking">
@@ -265,9 +265,9 @@
   </div>
 
   <div class="form-group">
-    <label for="language">Response Language</label>
+    <label for="language" data-i18n="labelLanguage">Response Language</label>
     <select id="language">
-      <option value="auto">Auto (Browser Default)</option>
+      <option value="auto" data-i18n="langAuto">Auto (Browser Default)</option>
       <option value="en">English</option>
       <option value="zh">中文</option>
       <option value="ja">日本語</option>
@@ -275,17 +275,40 @@
       <option value="es">Español</option>
       <option value="fr">Français</option>
       <option value="de">Deutsch</option>
+      <option value="it">Italiano</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+      <option value="bn">বাংলা</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="th">ไทย</option>
+      <option value="id">Bahasa Indonesia</option>
+      <option value="ms">Bahasa Melayu</option>
+      <option value="tl">Filipino</option>
+      <option value="nl">Nederlands</option>
+      <option value="pl">Polski</option>
+      <option value="tr">Türkçe</option>
+      <option value="uk">Українська</option>
+      <option value="cs">Čeština</option>
+      <option value="sv">Svenska</option>
+      <option value="da">Dansk</option>
+      <option value="fi">Suomi</option>
+      <option value="no">Norsk</option>
+      <option value="el">Ελληνικά</option>
+      <option value="he">עברית</option>
+      <option value="ro">Română</option>
     </select>
   </div>
 
-  <button class="btn" id="saveBtn">Save Settings</button>
+  <button class="btn" id="saveBtn" data-i18n="btnSave">Save Settings</button>
 
   <div class="status" id="status"></div>
 
   <div class="instructions">
-    <h3>How to use</h3>
-    <p>Select any text on a webpage, right-click, and choose <code>Lens: See Through This</code> to get instant insight.</p>
-    <p class="api-link">Get your API key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
+    <h3 data-i18n="instructionsTitle">How to use</h3>
+    <p data-i18n="instructionsText">Select any text on a webpage, right-click, and choose <code>💡 Lens</code> to get instant insight.</p>
+    <p class="api-link" data-i18n="apiLinkText">Get your API key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
   </div>
 
   <script src="popup.js"></script>

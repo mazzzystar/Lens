@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Gürültü çağında zihin için bir bisiklet. Gürültünün ötesinde gerçeği gör."
+  },
+  "tagline": {
+    "message": "Gürültünün ötesinde gerçeği gör"
+  },
+  "labelModel": {
+    "message": "AI Modeli"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Varsayılan)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter API Anahtarı"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Derin Düşünme"
+  },
+  "descThinking": {
+    "message": "Daha yavaş ama daha kapsamlı analiz"
+  },
+  "labelLanguage": {
+    "message": "Yanıt Dili"
+  },
+  "langAuto": {
+    "message": "Otomatik (Tarayıcı Varsayılanı)"
+  },
+  "btnSave": {
+    "message": "Ayarları Kaydet"
+  },
+  "instructionsTitle": {
+    "message": "Nasıl Kullanılır"
+  },
+  "instructionsText": {
+    "message": "Bir web sayfasında herhangi bir metni seçin, sağ tıklayın ve anında içgörü almak için <code>💡 Lens</code> seçeneğini seçin."
+  },
+  "apiLinkText": {
+    "message": "API anahtarınızı <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a> adresinden alın"
+  },
+  "errorNoApiKey": {
+    "message": "Lütfen bir API anahtarı girin"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter API anahtarları \"sk-or-\" ile başlamalıdır"
+  },
+  "statusSaved": {
+    "message": "Ayarlar başarıyla kaydedildi"
+  },
+  "statusError": {
+    "message": "Ayarlar kaydedilemedi"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Düşünüyor"
+  }
+}

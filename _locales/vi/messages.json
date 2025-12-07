@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Một chiếc xe đạp cho tâm trí trong kỷ nguyên ồn ào. Nhìn xuyên qua tiếng ồn đến sự thật."
+  },
+  "tagline": {
+    "message": "Nhìn xuyên qua tiếng ồn đến sự thật"
+  },
+  "labelModel": {
+    "message": "Mô hình AI"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Mặc định)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "Khóa API OpenRouter"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Suy nghĩ sâu"
+  },
+  "descThinking": {
+    "message": "Chậm hơn nhưng phân tích kỹ lưỡng hơn"
+  },
+  "labelLanguage": {
+    "message": "Ngôn ngữ phản hồi"
+  },
+  "langAuto": {
+    "message": "Tự động (Mặc định trình duyệt)"
+  },
+  "btnSave": {
+    "message": "Lưu cài đặt"
+  },
+  "instructionsTitle": {
+    "message": "Cách sử dụng"
+  },
+  "instructionsText": {
+    "message": "Chọn bất kỳ văn bản nào trên trang web, nhấp chuột phải và chọn <code>💡 Lens</code> để có cái nhìn tức thì."
+  },
+  "apiLinkText": {
+    "message": "Lấy khóa API của bạn tại <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Vui lòng nhập khóa API"
+  },
+  "errorInvalidApiKey": {
+    "message": "Khóa API OpenRouter phải bắt đầu bằng \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Đã lưu cài đặt thành công"
+  },
+  "statusError": {
+    "message": "Không thể lưu cài đặt"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Đang suy nghĩ"
+  }
+}

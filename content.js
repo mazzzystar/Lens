@@ -2,7 +2,25 @@
 // Select text → Right-click → 💡 Lens → See insight below
 
 let currentInsight = null;
-let insertAfterElement = null;
+let savedInsertInfo = null;
+
+// Save selection position on mouseup (before right-click menu appears)
+document.addEventListener('mouseup', () => {
+  const selection = window.getSelection();
+  if (selection && selection.rangeCount > 0 && selection.toString().trim()) {
+    const range = selection.getRangeAt(0);
+    savedInsertInfo = findInsertPosition(range);
+  }
+});
+
+// Also save on selectionchange for better coverage
+document.addEventListener('selectionchange', () => {
+  const selection = window.getSelection();
+  if (selection && selection.rangeCount > 0 && selection.toString().trim()) {
+    const range = selection.getRangeAt(0);
+    savedInsertInfo = findInsertPosition(range);
+  }
+});
 
 // Listen for messages from background script
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -27,21 +45,17 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // Handle start - find position and clear selection
 function handleStart() {
-  // Find where to insert (after the selected text's container)
+  // Clear selection so user can see original text
   const selection = window.getSelection();
-  if (selection.rangeCount > 0) {
-    const range = selection.getRangeAt(0);
-    insertAfterElement = findInsertPosition(range);
+  if (selection) {
+    selection.removeAllRanges();
   }
 
-  // Clear selection so user can see original text
-  selection.removeAllRanges();
-
-  // Show loading state
-  showLoading();
+  // Show loading state immediately using saved position
+  showLoading(savedInsertInfo);
 }
 
-// Find the best element to insert after
+// Find the best element to insert after using CSS display property
 function findInsertPosition(range) {
   let node = range.endContainer;
 
@@ -50,36 +64,64 @@ function findInsertPosition(range) {
     node = node.parentElement;
   }
 
-  // Walk up to find a block-level element
-  const blockTags = ['P', 'DIV', 'ARTICLE', 'SECTION', 'BLOCKQUOTE', 'LI', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'PRE'];
+  if (!node) return null;
 
-  while (node && node !== document.body) {
-    if (blockTags.includes(node.tagName)) {
-      return node;
+  // Block-level display values
+  const blockDisplays = ['block', 'flex', 'grid', 'table', 'table-row', 'table-cell', 'list-item', 'table-caption'];
+
+  // Walk up to find a block-level element using computed style
+  let current = node;
+  while (current && current !== document.body && current !== document.documentElement) {
+    try {
+      const style = window.getComputedStyle(current);
+      const display = style.display;
+
+      if (blockDisplays.includes(display)) {
+        return {
+          element: current,
+          tagName: current.tagName,
+          display: display
+        };
+      }
+    } catch (e) {
+      // getComputedStyle can fail on some elements
     }
-    // Also check for common content classes
-    if (node.classList && (
-      node.classList.contains('tweet') ||
-      node.classList.contains('post') ||
-      node.classList.contains('content') ||
-      node.classList.contains('text')
-    )) {
-      return node;
-    }
-    node = node.parentElement;
+    current = current.parentElement;
   }
 
-  // Fallback: use the direct parent
-  return range.endContainer.parentElement;
+  // Fallback: return the original node's parent
+  return {
+    element: node,
+    tagName: node.tagName || 'DIV',
+    display: 'block'
+  };
 }
 
 // Show loading state
-function showLoading() {
-  removeExisting();
+function showLoading(insertInfo) {
+  // Synchronously remove existing insight to avoid race condition
+  removeExistingSync();
 
-  if (!insertAfterElement) return;
+  // Use provided insertInfo or fallback
+  if (!insertInfo || !insertInfo.element) {
+    // Fallback: find a reasonable container
+    const fallbackEl = document.querySelector('article, main, [role="main"], .content, .post') || document.body.firstElementChild;
+    if (!fallbackEl) return;
+    insertInfo = { element: fallbackEl, tagName: 'DIV', display: 'block' };
+  }
 
-  currentInsight = document.createElement('div');
+  const insertAfterElement = insertInfo.element;
+
+  // Check if element is still in DOM
+  if (!document.body.contains(insertAfterElement)) {
+    return;
+  }
+
+  // Create insight container - use same tag type as the original for consistency
+  const safeTags = ['DIV', 'P', 'SECTION', 'ARTICLE', 'ASIDE', 'BLOCKQUOTE'];
+  const useTag = safeTags.includes(insertInfo.tagName) ? insertInfo.tagName.toLowerCase() : 'div';
+
+  currentInsight = document.createElement(useTag);
   currentInsight.className = 'lens-insight lens-loading';
   currentInsight.innerHTML = `
     <div class="lens-insight-header">
@@ -89,17 +131,41 @@ function showLoading() {
     </div>
   `;
 
-  insertAfterElement.insertAdjacentElement('afterend', currentInsight);
+  // Insert after the element
+  try {
+    insertAfterElement.insertAdjacentElement('afterend', currentInsight);
+  } catch (e) {
+    // Some elements don't support insertAdjacentElement, try parentNode
+    try {
+      insertAfterElement.parentNode.insertBefore(currentInsight, insertAfterElement.nextSibling);
+    } catch (e2) {
+      // Last resort: append to body
+      document.body.appendChild(currentInsight);
+    }
+  }
 
+  // Make visible with animation
   requestAnimationFrame(() => {
-    currentInsight.classList.add('lens-visible');
+    if (currentInsight) {
+      currentInsight.classList.add('lens-visible');
+    }
   });
+}
+
+// Synchronously remove existing insight (no setTimeout race condition)
+function removeExistingSync() {
+  if (currentInsight) {
+    if (currentInsight.parentNode) {
+      currentInsight.remove();
+    }
+    currentInsight = null;
+  }
 }
 
 // Start streaming - keep loading state, will update when first chunk arrives
 function startStreaming() {
   if (!currentInsight) {
-    showLoading();
+    showLoading(savedInsertInfo);
   }
   // Don't change anything here - keep showing "Thinking..." until first chunk
 }
@@ -107,8 +173,10 @@ function startStreaming() {
 // Update streaming content
 function updateStreamingContent(fullContent) {
   if (!currentInsight) {
-    showLoading();
+    showLoading(savedInsertInfo);
   }
+
+  if (!currentInsight) return; // Still no insight, bail out
 
   // Check if we need to transition from loading to content state
   let textDiv = currentInsight.querySelector('.lens-text');
@@ -126,21 +194,37 @@ function updateStreamingContent(fullContent) {
     textDiv = currentInsight.querySelector('.lens-text');
   }
 
-  textDiv.innerHTML = parseMarkdown(fullContent);
-
-  // Auto-scroll if insight is long
-  textDiv.scrollTop = textDiv.scrollHeight;
+  if (textDiv) {
+    textDiv.innerHTML = parseMarkdown(fullContent);
+    // Auto-scroll if insight is long
+    textDiv.scrollTop = textDiv.scrollHeight;
+  }
 }
 
 // Finish streaming
 function finishStreaming(insight) {
   if (!currentInsight) {
-    startStreaming();
+    showLoading(savedInsertInfo);
   }
+
+  if (!currentInsight) return;
 
   currentInsight.classList.remove('lens-loading');
 
-  const textDiv = currentInsight.querySelector('.lens-text');
+  // Ensure we have the content structure
+  let textDiv = currentInsight.querySelector('.lens-text');
+  if (!textDiv) {
+    currentInsight.innerHTML = `
+      <div class="lens-insight-header">
+        <span class="lens-icon">💡</span>
+      </div>
+      <div class="lens-insight-body">
+        <div class="lens-text"></div>
+      </div>
+    `;
+    textDiv = currentInsight.querySelector('.lens-text');
+  }
+
   if (textDiv) {
     textDiv.classList.remove('lens-streaming');
     textDiv.innerHTML = parseMarkdown(insight);
@@ -161,12 +245,10 @@ function finishStreaming(insight) {
 // Show error
 function showError(error) {
   if (!currentInsight) {
-    if (!insertAfterElement) return;
-
-    currentInsight = document.createElement('div');
-    currentInsight.className = 'lens-insight';
-    insertAfterElement.insertAdjacentElement('afterend', currentInsight);
+    showLoading(savedInsertInfo);
   }
+
+  if (!currentInsight) return;
 
   currentInsight.classList.remove('lens-loading');
   currentInsight.classList.add('lens-error', 'lens-visible');
@@ -178,18 +260,23 @@ function showError(error) {
     </div>
   `;
 
-  currentInsight.querySelector('.lens-close').addEventListener('click', removeExisting);
+  const closeBtn = currentInsight.querySelector('.lens-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', removeExisting);
+  }
 }
 
-// Remove existing insight
+// Remove existing insight (with animation for user-initiated close)
 function removeExisting() {
-  if (currentInsight) {
-    currentInsight.classList.remove('lens-visible');
+  const toRemove = currentInsight;
+  currentInsight = null; // Clear reference immediately to prevent race conditions
+
+  if (toRemove) {
+    toRemove.classList.remove('lens-visible');
     setTimeout(() => {
-      if (currentInsight && currentInsight.parentNode) {
-        currentInsight.remove();
+      if (toRemove.parentNode) {
+        toRemove.remove();
       }
-      currentInsight = null;
     }, 200);
   }
 }

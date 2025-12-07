@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "ノイズ時代の思考の自転車。ノイズを見抜き、真実を見る。"
+  },
+  "tagline": {
+    "message": "ノイズを見抜き、真実を見る"
+  },
+  "labelModel": {
+    "message": "AIモデル"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro（デフォルト）"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "OpenRouter APIキー"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "深い思考"
+  },
+  "descThinking": {
+    "message": "遅いがより徹底的な分析"
+  },
+  "labelLanguage": {
+    "message": "回答言語"
+  },
+  "langAuto": {
+    "message": "自動（ブラウザのデフォルト）"
+  },
+  "btnSave": {
+    "message": "設定を保存"
+  },
+  "instructionsTitle": {
+    "message": "使い方"
+  },
+  "instructionsText": {
+    "message": "ウェブページでテキストを選択し、右クリックして <code>💡 Lens</code> を選択すると、即座に洞察が得られます。"
+  },
+  "apiLinkText": {
+    "message": "<a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a> でAPIキーを取得"
+  },
+  "errorNoApiKey": {
+    "message": "APIキーを入力してください"
+  },
+  "errorInvalidApiKey": {
+    "message": "OpenRouter APIキーは \"sk-or-\" で始まる必要があります"
+  },
+  "statusSaved": {
+    "message": "設定を保存しました"
+  },
+  "statusError": {
+    "message": "設定の保存に失敗しました"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "考え中"
+  }
+}

@@ -2,6 +2,9 @@
 // Simple settings management for OpenRouter
 
 document.addEventListener('DOMContentLoaded', async () => {
+  // Apply i18n translations
+  applyTranslations();
+
   const modelSelect = document.getElementById('model');
   const apiKeyInput = document.getElementById('apiKey');
   const enableThinkingCheckbox = document.getElementById('enableThinking');
@@ -33,25 +36,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     const enableThinking = enableThinkingCheckbox.checked;
 
     if (!apiKey) {
-      showStatus('Please enter an API key', 'error');
+      showStatus('errorNoApiKey', 'error', 'Please enter an API key');
       return;
     }
 
     // Basic validation for OpenRouter API key
     if (!apiKey.startsWith('sk-or-')) {
-      showStatus('OpenRouter API keys should start with "sk-or-"', 'error');
+      showStatus('errorInvalidApiKey', 'error', 'OpenRouter API keys should start with "sk-or-"');
       return;
     }
 
     try {
       await chrome.storage.sync.set({ apiKey, model, language, enableThinking });
-      showStatus('Settings saved successfully', 'success');
+      showStatus('statusSaved', 'success', 'Settings saved successfully');
     } catch (error) {
-      showStatus('Failed to save settings', 'error');
+      showStatus('statusError', 'error', 'Failed to save settings');
     }
   });
 
-  function showStatus(message, type) {
+  function showStatus(messageKey, type, fallback) {
+    const message = chrome.i18n.getMessage(messageKey) || fallback || messageKey;
     statusDiv.textContent = message;
     statusDiv.className = `status ${type}`;
 
@@ -61,3 +65,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     }, 3000);
   }
 });
+
+// Apply translations to elements with data-i18n attributes
+function applyTranslations() {
+  // Text content translations
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const message = chrome.i18n.getMessage(key);
+    if (message) {
+      // Preserve inner HTML for elements with links
+      if (el.querySelector('a') || el.querySelector('code')) {
+        // Replace only the text parts, keep the HTML
+        el.innerHTML = message;
+      } else {
+        el.textContent = message;
+      }
+    }
+  });
+
+  // Placeholder translations
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const message = chrome.i18n.getMessage(key);
+    if (message) {
+      el.placeholder = message;
+    }
+  });
+}

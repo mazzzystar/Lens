@@ -26,7 +26,7 @@ Your analysis should be:
 
 Format your response in Markdown. Use headers, bullet points, or emphasis where appropriate to structure your thoughts clearly.`;
 
-// Language names mapping
+// Language names mapping (30 languages)
 const LANGUAGE_NAMES = {
   'en': 'English',
   'zh': 'Chinese',
@@ -34,7 +34,30 @@ const LANGUAGE_NAMES = {
   'ko': 'Korean',
   'es': 'Spanish',
   'fr': 'French',
-  'de': 'German'
+  'de': 'German',
+  'it': 'Italian',
+  'pt': 'Portuguese',
+  'ru': 'Russian',
+  'ar': 'Arabic',
+  'hi': 'Hindi',
+  'bn': 'Bengali',
+  'vi': 'Vietnamese',
+  'th': 'Thai',
+  'id': 'Indonesian',
+  'ms': 'Malay',
+  'tl': 'Filipino',
+  'nl': 'Dutch',
+  'pl': 'Polish',
+  'tr': 'Turkish',
+  'uk': 'Ukrainian',
+  'cs': 'Czech',
+  'sv': 'Swedish',
+  'da': 'Danish',
+  'fi': 'Finnish',
+  'no': 'Norwegian',
+  'el': 'Greek',
+  'he': 'Hebrew',
+  'ro': 'Romanian'
 };
 
 // Build system prompt with language instruction
@@ -51,7 +74,7 @@ function buildSystemPrompt(language) {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'lens-analyze',
-    title: '💡 Lens',
+    title: chrome.i18n.getMessage('contextMenuTitle') || '💡 Lens',
     contexts: ['selection']
   });
 });

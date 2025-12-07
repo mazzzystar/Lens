@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "Basikal untuk minda dalam era kebisingan. Lihat melalui kebisingan kepada kebenaran."
+  },
+  "tagline": {
+    "message": "Lihat melalui kebisingan kepada kebenaran"
+  },
+  "labelModel": {
+    "message": "Model AI"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Lalai)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "Kunci API OpenRouter"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Pemikiran Mendalam"
+  },
+  "descThinking": {
+    "message": "Lebih perlahan tetapi analisis lebih teliti"
+  },
+  "labelLanguage": {
+    "message": "Bahasa Respons"
+  },
+  "langAuto": {
+    "message": "Auto (Lalai Pelayar)"
+  },
+  "btnSave": {
+    "message": "Simpan Tetapan"
+  },
+  "instructionsTitle": {
+    "message": "Cara Menggunakan"
+  },
+  "instructionsText": {
+    "message": "Pilih mana-mana teks pada halaman web, klik kanan, dan pilih <code>💡 Lens</code> untuk mendapat pandangan segera."
+  },
+  "apiLinkText": {
+    "message": "Dapatkan kunci API anda di <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Sila masukkan kunci API"
+  },
+  "errorInvalidApiKey": {
+    "message": "Kunci API OpenRouter mesti bermula dengan \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Tetapan berjaya disimpan"
+  },
+  "statusError": {
+    "message": "Gagal menyimpan tetapan"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Berfikir"
+  }
+}

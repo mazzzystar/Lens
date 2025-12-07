@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "O bicicletă pentru minte în era zgomotului. Vezi prin zgomot către adevăr."
+  },
+  "tagline": {
+    "message": "Vezi prin zgomot către adevăr"
+  },
+  "labelModel": {
+    "message": "Model AI"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (Implicit)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "Cheie API OpenRouter"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "Gândire profundă"
+  },
+  "descThinking": {
+    "message": "Mai lent dar analiză mai amănunțită"
+  },
+  "labelLanguage": {
+    "message": "Limba răspunsului"
+  },
+  "langAuto": {
+    "message": "Auto (Implicit browser)"
+  },
+  "btnSave": {
+    "message": "Salvează setările"
+  },
+  "instructionsTitle": {
+    "message": "Cum se utilizează"
+  },
+  "instructionsText": {
+    "message": "Selectează orice text pe o pagină web, dă clic dreapta și alege <code>💡 Lens</code> pentru informații instantanee."
+  },
+  "apiLinkText": {
+    "message": "Obține cheia API la <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "Te rugăm să introduci o cheie API"
+  },
+  "errorInvalidApiKey": {
+    "message": "Cheile API OpenRouter trebuie să înceapă cu \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "Setări salvate cu succes"
+  },
+  "statusError": {
+    "message": "Nu s-au putut salva setările"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "Gândesc"
+  }
+}

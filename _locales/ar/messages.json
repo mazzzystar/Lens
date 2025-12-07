@@ -1,0 +1,68 @@
+{
+  "extName": {
+    "message": "Lens"
+  },
+  "extDescription": {
+    "message": "دراجة للعقل في عصر الضوضاء. انظر عبر الضوضاء إلى الحقيقة."
+  },
+  "tagline": {
+    "message": "انظر عبر الضوضاء إلى الحقيقة"
+  },
+  "labelModel": {
+    "message": "نموذج الذكاء الاصطناعي"
+  },
+  "modelGemini": {
+    "message": "Gemini 3 Pro (افتراضي)"
+  },
+  "modelClaude": {
+    "message": "Claude 4 Opus"
+  },
+  "labelApiKey": {
+    "message": "مفتاح API لـ OpenRouter"
+  },
+  "placeholderApiKey": {
+    "message": "sk-or-v1-..."
+  },
+  "labelThinking": {
+    "message": "التفكير العميق"
+  },
+  "descThinking": {
+    "message": "أبطأ ولكن تحليل أكثر شمولاً"
+  },
+  "labelLanguage": {
+    "message": "لغة الرد"
+  },
+  "langAuto": {
+    "message": "تلقائي (افتراضي المتصفح)"
+  },
+  "btnSave": {
+    "message": "حفظ الإعدادات"
+  },
+  "instructionsTitle": {
+    "message": "كيفية الاستخدام"
+  },
+  "instructionsText": {
+    "message": "حدد أي نص على صفحة ويب، انقر بزر الماوس الأيمن، واختر <code>💡 Lens</code> للحصول على رؤية فورية."
+  },
+  "apiLinkText": {
+    "message": "احصل على مفتاح API الخاص بك من <a href=\"https://openrouter.ai/keys\" target=\"_blank\">openrouter.ai/keys</a>"
+  },
+  "errorNoApiKey": {
+    "message": "الرجاء إدخال مفتاح API"
+  },
+  "errorInvalidApiKey": {
+    "message": "يجب أن تبدأ مفاتيح API الخاصة بـ OpenRouter بـ \"sk-or-\""
+  },
+  "statusSaved": {
+    "message": "تم حفظ الإعدادات بنجاح"
+  },
+  "statusError": {
+    "message": "فشل في حفظ الإعدادات"
+  },
+  "contextMenuTitle": {
+    "message": "💡 Lens"
+  },
+  "loadingText": {
+    "message": "جارٍ التفكير"
+  }
+}
