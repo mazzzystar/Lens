@@ -5,8 +5,7 @@
   "description": "A Bicycle for the Mind in the Age of Noise. See through the noise to the truth.",
   "permissions": [
     "contextMenus",
-    "storage",
-    "activeTab"
+    "storage"
   ],
   "host_permissions": [
     "https://openrouter.ai/*"

@@ -16,7 +16,7 @@ const MODELS = {
   }
 };
 
-// The Soul of Lens: The Prompt that makes it sharp
+// The Soul of Lens: The Prompt
 const LENS_BASE_PROMPT = `You are Lens, a thoughtful analyst. Give sharp, insightful, and comprehensive commentary on the given text.
 
 Your analysis should be:
@@ -51,7 +51,7 @@ function buildSystemPrompt(language) {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'lens-analyze',
-    title: 'Lens: See Through This',
+    title: '💡 Lens',
     contexts: ['selection']
   });
 });
@@ -59,9 +59,9 @@ chrome.runtime.onInstalled.addListener(() => {
 // Handle context menu click
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === 'lens-analyze' && info.selectionText) {
-    // Send message to content script to show loading
+    // Tell content script to clear selection and show loading
     chrome.tabs.sendMessage(tab.id, {
-      type: 'LENS_LOADING',
+      type: 'LENS_START',
       text: info.selectionText
     });
 
@@ -122,7 +122,6 @@ async function generateInsightStreaming(text, tabId) {
   if (!response.ok) {
     const error = await response.json();
     const errorMessage = error.error?.message || 'API request failed';
-    // Provide clearer error for API key issues
     if (errorMessage.includes('API key') || errorMessage.includes('Unauthorized') || response.status === 401) {
       throw new Error('Invalid OpenRouter API key. Get yours at openrouter.ai/keys');
     }
