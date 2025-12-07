@@ -2,13 +2,23 @@
 
 **A Bicycle for the Mind in the Age of AI.**
 
-[中文版](README_CN.md)
+[中文版](README_CN.md) | [Download v0.0.1](https://github.com/mazzzystar/Lens/releases/download/v0.0.1/Lens-v0.0.1.zip)
 
-<!-- ![Lens Demo](assets/demo.gif) -->
+https://github.com/user-attachments/assets/b351933f-8226-42c4-bea6-04223e171e9a
 
 For any statement on social media, select text, right-click "💡Lens", and get deep AI insights — enabling passive deep thinking while you surf the web.
 
 ## Installation
+
+### Quick Install
+
+1. [Download the latest release](https://github.com/mazzzystar/Lens/releases/download/v0.0.1/Lens-v0.0.1.zip)
+2. Unzip the file
+3. Open Chrome → `chrome://extensions/`
+4. Enable **Developer mode** (top right)
+5. Click **Load unpacked** and select the unzipped folder
+
+### From Source
 
 1. Clone this repository:
    ```bash
@@ -28,7 +38,6 @@ For any statement on social media, select text, right-click "💡Lens", and get 
 
 Default model is Gemini 3 Pro. You can switch to Claude 4 Opus, but Gemini tends to provide deeper thinking.
 
-<!-- ![Settings](assets/settings.png) -->
 
 ## Usage
 
@@ -36,7 +45,6 @@ Default model is Gemini 3 Pro. You can switch to Claude 4 Opus, but Gemini tends
 2. Right-click → **💡 Lens**
 3. See the insight appear below
 
-<!-- ![Usage](assets/usage.gif) -->
 
 ## Why I Built This
 
