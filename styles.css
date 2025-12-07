@@ -1,0 +1,294 @@
+/* Lens - Elegant Minimal Styles */
+/* "Design is not just what it looks like. Design is how it works." */
+
+.lens-popup {
+  position: absolute;
+  z-index: 2147483647;
+  width: 480px;
+  max-width: calc(100vw - 40px);
+  max-height: 70vh;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e5e5e5;
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.lens-popup.lens-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Header */
+.lens-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.lens-logo {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.lens-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.lens-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Content */
+.lens-content {
+  padding: 16px;
+  max-height: calc(70vh - 50px);
+  overflow-y: auto;
+}
+
+/* Loading state */
+.lens-loading .lens-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #888;
+}
+
+.lens-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: lens-spin 0.8s linear infinite;
+}
+
+@keyframes lens-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Insight display */
+.lens-insight {
+  color: #e5e5e5;
+}
+
+/* Markdown styles */
+.lens-insight h2.lens-h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 16px 0 8px 0;
+  color: #fff;
+}
+
+.lens-insight h3.lens-h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 14px 0 6px 0;
+  color: #fff;
+}
+
+.lens-insight h4.lens-h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 12px 0 4px 0;
+  color: #fff;
+}
+
+.lens-insight strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+.lens-insight em {
+  font-style: italic;
+  color: #b0b0b0;
+}
+
+.lens-insight .lens-ul,
+.lens-insight .lens-ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.lens-insight .lens-li,
+.lens-insight .lens-oli {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.lens-insight .lens-quote {
+  border-left: 3px solid #6366f1;
+  padding-left: 12px;
+  margin: 8px 0;
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.lens-insight .lens-code-block {
+  background: #0d0d0d;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 8px 0;
+  overflow-x: auto;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.lens-insight .lens-inline-code {
+  background: rgba(99, 102, 241, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.lens-insight .lens-link {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.lens-insight .lens-link:hover {
+  text-decoration: underline;
+}
+
+.lens-insight .lens-hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 16px 0;
+}
+
+/* Streaming cursor */
+.lens-streaming {
+  min-height: 40px;
+}
+
+.lens-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #6366f1;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: lens-blink 0.8s infinite;
+}
+
+@keyframes lens-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Error state */
+.lens-error .lens-content {
+  color: #ff6b6b;
+}
+
+.lens-error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.lens-error-icon {
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .lens-popup {
+    width: calc(100vw - 20px);
+    left: 10px !important;
+    right: 10px;
+  }
+}
+
+/* Dark mode already default, but ensure consistency */
+@media (prefers-color-scheme: light) {
+  .lens-popup {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(0, 0, 0, 0.05);
+    color: #1a1a1a;
+  }
+
+  .lens-header {
+    background: rgba(0, 0, 0, 0.02);
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .lens-logo {
+    color: #1a1a1a;
+  }
+
+  .lens-close {
+    color: #999;
+  }
+
+  .lens-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1a1a1a;
+  }
+
+  .lens-insight {
+    color: #1a1a1a;
+  }
+
+  .lens-insight h2.lens-h2,
+  .lens-insight h3.lens-h3,
+  .lens-insight h4.lens-h4,
+  .lens-insight strong {
+    color: #1a1a1a;
+  }
+
+  .lens-insight em {
+    color: #555;
+  }
+
+  .lens-insight .lens-quote {
+    color: #666;
+  }
+
+  .lens-insight .lens-code-block {
+    background: #f5f5f5;
+  }
+
+  .lens-insight .lens-inline-code {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  .lens-insight .lens-hr {
+    border-top-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .lens-spinner {
+    border-color: rgba(0, 0, 0, 0.1);
+    border-top-color: #1a1a1a;
+  }
+}

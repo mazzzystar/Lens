@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lens</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      background: #1a1a1a;
+      color: #e5e5e5;
+      padding: 24px;
+    }
+
+    .header {
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    select, input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      background: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      transition: border-color 0.2s ease;
+    }
+
+    select:focus, input[type="password"]:focus {
+      outline: none;
+      border-color: #555;
+    }
+
+    select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+    }
+
+    /* Toggle switch */
+    .toggle-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .toggle-label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toggle-title {
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .toggle-desc {
+      font-size: 11px;
+      color: #666;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #333;
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #666;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .toggle-slider {
+      background-color: #4f46e5;
+    }
+
+    input:checked + .toggle-slider:before {
+      transform: translateX(20px);
+      background-color: #fff;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #fff;
+      color: #1a1a1a;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #e5e5e5;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .status {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      display: none;
+    }
+
+    .status.success {
+      display: block;
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.2);
+    }
+
+    .status.error {
+      display: block;
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .instructions {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+    }
+
+    .instructions h3 {
+      font-size: 12px;
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .instructions p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .instructions code {
+      background: #2a2a2a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .instructions a {
+      color: #6366f1;
+      text-decoration: none;
+    }
+
+    .instructions a:hover {
+      text-decoration: underline;
+    }
+
+    .api-link {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">◉ Lens</div>
+    <div class="tagline">See through the noise to the truth</div>
+  </div>
+
+  <div class="form-group">
+    <label for="model">AI Model</label>
+    <select id="model">
+      <option value="gemini-3-pro">Gemini 3 Pro (Default)</option>
+      <option value="claude-4-opus">Claude 4 Opus</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="apiKey">OpenRouter API Key</label>
+    <input type="password" id="apiKey" placeholder="sk-or-v1-...">
+  </div>
+
+  <div class="toggle-group">
+    <div class="toggle-label">
+      <span class="toggle-title">Deep Thinking</span>
+      <span class="toggle-desc">Slower but more thorough analysis</span>
+    </div>
+    <label class="toggle-switch">
+      <input type="checkbox" id="enableThinking">
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="language">Response Language</label>
+    <select id="language">
+      <option value="auto">Auto (Browser Default)</option>
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </div>
+
+  <button class="btn" id="saveBtn">Save Settings</button>
+
+  <div class="status" id="status"></div>
+
+  <div class="instructions">
+    <h3>How to use</h3>
+    <p>Select any text on a webpage, right-click, and choose <code>Lens: See Through This</code> to get instant insight.</p>
+    <p class="api-link">Get your API key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

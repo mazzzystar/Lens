@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Lens",
+  "version": "1.1.0",
+  "description": "A Bicycle for the Mind in the Age of Noise. See through the noise to the truth.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://openrouter.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["markdown.js", "content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/lens-16.png",
+      "48": "icons/lens-48.png",
+      "128": "icons/lens-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/lens-16.png",
+    "48": "icons/lens-48.png",
+    "128": "icons/lens-128.png"
+  }
+}
