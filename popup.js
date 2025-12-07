@@ -24,9 +24,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (config.language) {
     languageSelect.value = config.language;
   }
-  if (config.enableThinking) {
-    enableThinkingCheckbox.checked = config.enableThinking;
-  }
+  // Default to thinking enabled
+  enableThinkingCheckbox.checked = config.enableThinking !== false;
 
   // Save settings
   saveBtn.addEventListener('click', async () => {

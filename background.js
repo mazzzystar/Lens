@@ -110,7 +110,7 @@ async function generateInsightStreaming(text, tabId) {
   const modelKey = config.model || 'gemini-3-pro';
   const model = MODELS[modelKey];
   const language = config.language || 'auto';
-  const enableThinking = config.enableThinking || false;
+  const enableThinking = config.enableThinking !== false; // Default to true
   const systemPrompt = buildSystemPrompt(language);
 
   // Build request body
