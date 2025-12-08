@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - Penganalisis Teks AI"
   },
   "extDescription": {
-    "message": "Basikal untuk minda dalam era kebisingan. Lihat melalui kebisingan kepada kebenaran."
+    "message": "Pilih teks, klik kanan untuk analisis AI. Analisis posting dan pendapat untuk pemikiran kritis. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Lihat melalui kebisingan kepada kebenaran"
@@ -60,7 +60,7 @@
     "message": "Gagal menyimpan tetapan"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Berfikir"

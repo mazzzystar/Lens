@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - Αναλυτής κειμένου AI"
   },
   "extDescription": {
-    "message": "Ένα ποδήλατο για το μυαλό στην εποχή του θορύβου. Δες μέσα από το θόρυβο την αλήθεια."
+    "message": "Επιλέξτε κείμενο, δεξί κλικ για AI ανάλυση. Αναλύστε αναρτήσεις και απόψεις για κριτική σκέψη. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Δες μέσα από το θόρυβο την αλήθεια"
@@ -60,7 +60,7 @@
     "message": "Αποτυχία αποθήκευσης ρυθμίσεων"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Σκέφτομαι"

@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - מנתח טקסט AI"
   },
   "extDescription": {
-    "message": "אופניים לנפש בעידן הרעש. ראה דרך הרעש אל האמת."
+    "message": "בחר טקסט, לחץ ימני לניתוח AI. נתח פוסטים ודעות לפיתוח חשיבה ביקורתית. Gemini, Claude. קוד פתוח."
   },
   "tagline": {
     "message": "ראה דרך הרעש אל האמת"
@@ -60,7 +60,7 @@
     "message": "שמירת ההגדרות נכשלה"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "חושב"

@@ -1,10 +1,10 @@
 {
   "extName": {
-    "message": "Lens",
+    "message": "Lens - AI Text Analyzer & Insights",
     "description": "Extension name"
   },
   "extDescription": {
-    "message": "A Bicycle for the Mind in the Age of Noise. See through the noise to the truth.",
+    "message": "Select text, right-click for AI insights. Analyze posts & opinions to sharpen critical thinking. Gemini, Claude & more. Open source.",
     "description": "Extension description"
   },
   "tagline": {
@@ -80,7 +80,7 @@
     "description": "Error message"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens",
+    "message": "Lens",
     "description": "Context menu item title"
   },
   "loadingText": {

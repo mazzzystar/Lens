@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI-tekstanalysator"
   },
   "extDescription": {
-    "message": "En cykel til sindet i støjens tidsalder. Se igennem støjen til sandheden."
+    "message": "Vælg tekst, højreklik for AI-analyse. Analyser opslag og meninger for at skærpe kritisk tænkning. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Se igennem støjen til sandheden"
@@ -60,7 +60,7 @@
     "message": "Kunne ikke gemme indstillinger"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Tænker"

@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - 用 AI 深度分析他人观点"
   },
   "extDescription": {
-    "message": "噪音时代的思维单车。透过噪音，看见真相。"
+    "message": "选中文本，右键获取AI深度洞察。分析社交媒体观点，被动提升思辨能力。Gemini、Claude。开源安全。"
   },
   "tagline": {
     "message": "透过噪音，看见真相"
@@ -60,7 +60,7 @@
     "message": "保存设置失败"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "思考中"

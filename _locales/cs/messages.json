@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI Analyzátor textu"
   },
   "extDescription": {
-    "message": "Kolo pro mysl v době hluku. Podívej se skrz hluk k pravdě."
+    "message": "Vyberte text, pravý klik pro AI analýzu. Analyzujte příspěvky a názory pro kritické myšlení. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Podívej se skrz hluk k pravdě"
@@ -60,7 +60,7 @@
     "message": "Nepodařilo se uložit nastavení"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Přemýšlím"

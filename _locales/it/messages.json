@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - Analizzatore Testi IA"
   },
   "extDescription": {
-    "message": "Una bicicletta per la mente nell'era del rumore. Vedere attraverso il rumore verso la verità."
+    "message": "Seleziona testo, clic destro per analisi IA. Analizza post e opinioni per affinare il pensiero critico. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Vedere attraverso il rumore verso la verità"
@@ -60,7 +60,7 @@
     "message": "Salvataggio impostazioni fallito"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Pensando"

@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI-textanalysator"
   },
   "extDescription": {
-    "message": "En cykel för sinnet i brusets tidsålder. Se genom bruset till sanningen."
+    "message": "Välj text, högerklicka för AI-analys. Analysera inlägg och åsikter för att skärpa kritiskt tänkande. Gemini, Claude. Öppen källkod."
   },
   "tagline": {
     "message": "Se genom bruset till sanningen"
@@ -60,7 +60,7 @@
     "message": "Kunde inte spara inställningar"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Tänker"

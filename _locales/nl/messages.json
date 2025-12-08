@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI Tekstanalyse"
   },
   "extDescription": {
-    "message": "Een fiets voor de geest in het tijdperk van ruis. Kijk door de ruis naar de waarheid."
+    "message": "Selecteer tekst, rechtermuisklik voor AI-analyse. Analyseer posts en meningen voor kritisch denken. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Kijk door de ruis naar de waarheid"
@@ -60,7 +60,7 @@
     "message": "Kon instellingen niet opslaan"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Aan het denken"

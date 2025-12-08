@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - Phân tích văn bản AI"
   },
   "extDescription": {
-    "message": "Một chiếc xe đạp cho tâm trí trong kỷ nguyên ồn ào. Nhìn xuyên qua tiếng ồn đến sự thật."
+    "message": "Chọn văn bản, nhấp phải để phân tích AI. Phân tích bài đăng và ý kiến cho tư duy phản biện. Gemini, Claude. Mã nguồn mở."
   },
   "tagline": {
     "message": "Nhìn xuyên qua tiếng ồn đến sự thật"
@@ -60,7 +60,7 @@
     "message": "Không thể lưu cài đặt"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Đang suy nghĩ"

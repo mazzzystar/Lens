@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI Text Analyzer"
   },
   "extDescription": {
-    "message": "Isang bisikleta para sa isip sa panahon ng ingay. Makita ang katotohanan sa kabila ng ingay."
+    "message": "Pumili ng teksto, right-click para sa AI analysis. Suriin posts at opinyon para sa critical thinking. Gemini, Claude. Open source."
   },
   "tagline": {
     "message": "Makita ang katotohanan sa kabila ng ingay"
@@ -60,7 +60,7 @@
     "message": "Nabigong i-save ang mga setting"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Nag-iisip"

@@ -74,7 +74,7 @@ function buildSystemPrompt(language) {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'lens-analyze',
-    title: chrome.i18n.getMessage('contextMenuTitle') || '💡 Lens',
+    title: chrome.i18n.getMessage('contextMenuTitle') || 'Lens',
     contexts: ['selection']
   });
 });

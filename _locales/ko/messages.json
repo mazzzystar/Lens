@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI 텍스트 분석 및 인사이트"
   },
   "extDescription": {
-    "message": "소음 시대의 생각의 자전거. 소음을 꿰뚫어 진실을 보다."
+    "message": "텍스트 선택 후 우클릭으로 AI 분석. SNS 게시물과 의견을 분석하여 비판적 사고력 향상. Gemini, Claude 지원. 오픈소스."
   },
   "tagline": {
     "message": "소음을 꿰뚫어 진실을 보다"
@@ -60,7 +60,7 @@
     "message": "설정 저장 실패"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "생각 중"

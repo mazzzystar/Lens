@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - AI Metin Analizörü"
   },
   "extDescription": {
-    "message": "Gürültü çağında zihin için bir bisiklet. Gürültünün ötesinde gerçeği gör."
+    "message": "Metin seçin, sağ tıklayın AI analizi için. Paylaşımları ve görüşleri analiz edin. Gemini, Claude. Açık kaynak."
   },
   "tagline": {
     "message": "Gürültünün ötesinde gerçeği gör"
@@ -60,7 +60,7 @@
     "message": "Ayarlar kaydedilemedi"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Düşünüyor"

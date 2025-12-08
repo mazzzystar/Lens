@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Lens"
+    "message": "Lens - KI-Textanalyse & Einblicke"
   },
   "extDescription": {
-    "message": "Ein Fahrrad für den Geist im Zeitalter des Lärms. Durch den Lärm zur Wahrheit sehen."
+    "message": "Text auswählen, Rechtsklick für KI-Analyse. Posts und Meinungen analysieren für kritisches Denken. Gemini, Claude. Open Source."
   },
   "tagline": {
     "message": "Durch den Lärm zur Wahrheit sehen"
@@ -60,7 +60,7 @@
     "message": "Speichern der Einstellungen fehlgeschlagen"
   },
   "contextMenuTitle": {
-    "message": "💡 Lens"
+    "message": "Lens"
   },
   "loadingText": {
     "message": "Denke nach"

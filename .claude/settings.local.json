@@ -5,7 +5,14 @@
       "Bash(git commit:*)",
       "Bash(git push)",
       "Bash(git remote add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(chmod:*)",
+      "Bash(./package.sh)",
+      "Bash(ffmpeg:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(git tag:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []
