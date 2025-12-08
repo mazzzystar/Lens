@@ -2,7 +2,7 @@
 
 **AI 时代的思维单车**
 
-[English](README.md) | [下载 v0.0.1](https://github.com/mazzzystar/Lens/releases/download/v0.0.1/Lens-v0.0.1.zip)
+[English](README.md) | [下载 v0.0.2](https://github.com/mazzzystar/Lens/releases/download/v0.0.2/Lens-v0.0.2.zip)
 
 https://github.com/user-attachments/assets/547ff5ce-ffda-4ab1-8a40-4ceec01a584b
 
@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/547ff5ce-ffda-4ab1-8a40-4ceec01a584b
 
 ### 快速安装
 
-1. [下载最新版本](https://github.com/mazzzystar/Lens/releases/download/v0.0.1/Lens-v0.0.1.zip)
+1. [下载最新版本](https://github.com/mazzzystar/Lens/releases/download/v0.0.2/Lens-v0.0.2.zip)
 2. 解压文件
 3. 打开 Chrome → `chrome://extensions/`
 4. 启用右上角的 **开发者模式**
