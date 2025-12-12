@@ -2,7 +2,7 @@
 
 **A Bicycle for the Mind in the Age of AI.**
 
-[中文版](README_CN.md) | [Download v0.0.2](https://github.com/mazzzystar/Lens/releases/download/v0.0.2/Lens-v0.0.2.zip)
+[中文版](README_CN.md) | [Download v0.0.3](https://github.com/mazzzystar/Lens/releases/download/v0.0.3/Lens-v0.0.3.zip)
 
 https://github.com/user-attachments/assets/b351933f-8226-42c4-bea6-04223e171e9a
 
@@ -12,7 +12,7 @@ For any statement on social media, select text, right-click "💡Lens", and get 
 
 ### Quick Install
 
-1. [Download the latest release](https://github.com/mazzzystar/Lens/releases/download/v0.0.2/Lens-v0.0.2.zip)
+1. [Download the latest release](https://github.com/mazzzystar/Lens/releases/download/v0.0.3/Lens-v0.0.3.zip)
 2. Unzip the file
 3. Open Chrome → `chrome://extensions/`
 4. Enable **Developer mode** (top right)
