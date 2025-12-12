@@ -1,18 +1,50 @@
 // Lens - Background Service Worker
 // A Bicycle for the Mind in the Age of Noise
-// Powered by OpenRouter
+// Multi-provider support: OpenRouter, DeepSeek, OpenAI
 
-// Available models
-const MODELS = {
-  'gemini-3-pro': {
-    id: 'google/gemini-3-pro-preview',
-    name: 'Gemini 3 Pro',
-    supportsThinking: true
+// Provider configurations with API endpoints and model mappings
+const PROVIDERS = {
+  openrouter: {
+    baseUrl: 'https://openrouter.ai/api/v1/chat/completions',
+    headers: (apiKey) => ({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+      'HTTP-Referer': 'https://github.com/user/lens-extension',
+      'X-Title': 'Lens - See Through the Noise'
+    }),
+    models: {
+      'gemini-3-pro': { id: 'google/gemini-3-pro-preview', supportsThinking: true },
+      'gemini-2.5-pro': { id: 'google/gemini-2.5-pro-preview-06-05', supportsThinking: true },
+      'claude-4-opus': { id: 'anthropic/claude-opus-4', supportsThinking: true },
+      'claude-4-sonnet': { id: 'anthropic/claude-sonnet-4', supportsThinking: true }
+    },
+    reasoningFormat: 'openrouter', // reasoning: { effort: "medium" }
+    errorMessage: 'Invalid OpenRouter API key. Get yours at openrouter.ai/keys'
   },
-  'claude-4-opus': {
-    id: 'anthropic/claude-opus-4',
-    name: 'Claude 4 Opus',
-    supportsThinking: true
+  deepseek: {
+    baseUrl: 'https://api.deepseek.com/chat/completions',
+    headers: (apiKey) => ({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    }),
+    models: {
+      'deepseek-chat': { id: 'deepseek-chat', supportsThinking: true }
+    },
+    reasoningFormat: 'deepseek', // thinking: { type: "enabled" }
+    errorMessage: 'Invalid DeepSeek API key. Get yours at platform.deepseek.com'
+  },
+  openai: {
+    baseUrl: 'https://api.openai.com/v1/chat/completions',
+    headers: (apiKey) => ({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    }),
+    models: {
+      'gpt-5.2': { id: 'gpt-5.2', supportsThinking: true },
+      'gpt-5': { id: 'gpt-5', supportsThinking: true }
+    },
+    reasoningFormat: 'openai', // reasoning_effort: "medium"
+    errorMessage: 'Invalid OpenAI API key. Get yours at platform.openai.com'
   }
 };
 
@@ -60,13 +92,41 @@ const LANGUAGE_NAMES = {
   'ro': 'Romanian'
 };
 
+// Get browser's preferred language
+async function getBrowserLanguage() {
+  return new Promise((resolve) => {
+    // chrome.i18n.getAcceptLanguages returns the user's preferred languages
+    // from Chrome settings -> Languages -> Preferred languages
+    chrome.i18n.getAcceptLanguages((languages) => {
+      if (languages && languages.length > 0) {
+        // Get the first preferred language and extract the base language code
+        // e.g., "en-US" -> "en", "zh-CN" -> "zh"
+        const primaryLang = languages[0].split('-')[0].toLowerCase();
+        resolve(primaryLang);
+      } else {
+        // Fallback to UI language
+        const uiLang = chrome.i18n.getUILanguage().split('-')[0].toLowerCase();
+        resolve(uiLang);
+      }
+    });
+  });
+}
+
 // Build system prompt with language instruction
-function buildSystemPrompt(language) {
+async function buildSystemPrompt(language) {
   let prompt = LENS_BASE_PROMPT;
-  if (language && language !== 'auto') {
-    const langName = LANGUAGE_NAMES[language] || language;
+
+  let targetLang = language;
+  if (!language || language === 'auto') {
+    // Get browser's preferred language
+    targetLang = await getBrowserLanguage();
+  }
+
+  if (targetLang && LANGUAGE_NAMES[targetLang]) {
+    const langName = LANGUAGE_NAMES[targetLang];
     prompt += `\n\nIMPORTANT: You MUST respond in ${langName}.`;
   }
+
   return prompt;
 }
 
@@ -99,19 +159,31 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   }
 });
 
-// Generate insight using OpenRouter API with streaming
+// Generate insight using the configured API provider with streaming
 async function generateInsightStreaming(text, tabId) {
-  const config = await chrome.storage.sync.get(['apiKey', 'model', 'language', 'enableThinking']);
+  const config = await chrome.storage.sync.get(['apiKey', 'provider', 'model', 'language', 'enableThinking']);
 
   if (!config.apiKey) {
-    throw new Error('Please set your OpenRouter API key in Lens settings');
+    throw new Error('Please set your API key in Lens settings');
   }
 
-  const modelKey = config.model || 'gemini-3-pro';
-  const model = MODELS[modelKey];
+  const providerKey = config.provider || 'openrouter';
+  const provider = PROVIDERS[providerKey];
+
+  if (!provider) {
+    throw new Error(`Unknown provider: ${providerKey}`);
+  }
+
+  const modelKey = config.model || Object.keys(provider.models)[0];
+  const model = provider.models[modelKey];
+
+  if (!model) {
+    throw new Error(`Unknown model: ${modelKey}`);
+  }
+
   const language = config.language || 'auto';
   const enableThinking = config.enableThinking !== false; // Default to true
-  const systemPrompt = buildSystemPrompt(language);
+  const systemPrompt = await buildSystemPrompt(language);
 
   // Build request body
   const requestBody = {
@@ -120,33 +192,51 @@ async function generateInsightStreaming(text, tabId) {
       { role: 'system', content: systemPrompt },
       { role: 'user', content: `What do you think of this? Give your commentary:\n\n"${text}"` }
     ],
-    temperature: 0.7,
     stream: true
   };
 
-  // Add reasoning parameter if thinking is enabled and model supports it
+  // Add reasoning parameter based on provider format
   if (enableThinking && model.supportsThinking) {
-    requestBody.reasoning = {
-      effort: 'medium'
-    };
+    switch (provider.reasoningFormat) {
+      case 'openrouter':
+        // OpenRouter uses reasoning: { effort: "medium" }
+        requestBody.reasoning = { effort: 'medium' };
+        break;
+      case 'deepseek':
+        // DeepSeek uses thinking: { type: "enabled" }
+        requestBody.thinking = { type: 'enabled' };
+        break;
+      case 'openai':
+        // OpenAI Chat Completions uses reasoning_effort: "medium"
+        requestBody.reasoning_effort = 'medium';
+        break;
+    }
   }
 
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+  // Only add temperature for providers/modes that support it
+  // DeepSeek thinking mode and OpenAI reasoning don't support temperature
+  if (!enableThinking || provider.reasoningFormat === 'openrouter') {
+    requestBody.temperature = 0.7;
+  }
+
+  const response = await fetch(provider.baseUrl, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${config.apiKey}`,
-      'HTTP-Referer': 'https://github.com/user/lens-extension',
-      'X-Title': 'Lens - See Through the Noise'
-    },
+    headers: provider.headers(config.apiKey),
     body: JSON.stringify(requestBody)
   });
 
   if (!response.ok) {
-    const error = await response.json();
-    const errorMessage = error.error?.message || 'API request failed';
-    if (errorMessage.includes('API key') || errorMessage.includes('Unauthorized') || response.status === 401) {
-      throw new Error('Invalid OpenRouter API key. Get yours at openrouter.ai/keys');
+    let errorMessage = 'API request failed';
+    try {
+      const error = await response.json();
+      errorMessage = error.error?.message || errorMessage;
+    } catch (e) {
+      // Ignore JSON parse errors
+    }
+
+    if (errorMessage.includes('API key') || errorMessage.includes('Unauthorized') ||
+        errorMessage.includes('Invalid') || response.status === 401) {
+      throw new Error(provider.errorMessage);
     }
     throw new Error(errorMessage);
   }

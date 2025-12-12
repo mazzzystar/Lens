@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Δες μέσα από το θόρυβο την αλήθεια"
   },
+  "labelProvider": {
+    "message": "Πάροχος"
+  },
   "labelModel": {
     "message": "Μοντέλο AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Προεπιλογή)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "Κλειδί API OpenRouter"
+    "message": "Κλειδί API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Εισάγετε το κλειδί API σας"
   },
   "labelThinking": {
     "message": "Βαθιά σκέψη"
@@ -51,7 +48,7 @@
     "message": "Παρακαλώ εισάγετε ένα κλειδί API"
   },
   "errorInvalidApiKey": {
-    "message": "Τα κλειδιά API του OpenRouter πρέπει να ξεκινούν με \"sk-or-\""
+    "message": "Μη έγκυρη μορφή κλειδιού API"
   },
   "statusSaved": {
     "message": "Οι ρυθμίσεις αποθηκεύτηκαν επιτυχώς"

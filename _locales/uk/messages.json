@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Дивись крізь шум до правди"
   },
+  "labelProvider": {
+    "message": "Провайдер"
+  },
   "labelModel": {
     "message": "Модель ШІ"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (За замовчуванням)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "API-ключ OpenRouter"
+    "message": "API-ключ"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Введіть API-ключ"
   },
   "labelThinking": {
     "message": "Глибоке мислення"
@@ -51,7 +48,7 @@
     "message": "Будь ласка, введіть API-ключ"
   },
   "errorInvalidApiKey": {
-    "message": "API-ключі OpenRouter повинні починатися з \"sk-or-\""
+    "message": "Невірний формат API-ключа"
   },
   "statusSaved": {
     "message": "Налаштування успішно збережено"

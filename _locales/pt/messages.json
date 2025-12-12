@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Veja através do ruído até a verdade"
   },
+  "labelProvider": {
+    "message": "Provedor"
+  },
   "labelModel": {
     "message": "Modelo de IA"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Padrão)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "Chave API OpenRouter"
+    "message": "Chave API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Digite sua chave API"
   },
   "labelThinking": {
     "message": "Pensamento profundo"
@@ -51,7 +48,7 @@
     "message": "Por favor, insira uma chave API"
   },
   "errorInvalidApiKey": {
-    "message": "Chaves API OpenRouter devem começar com \"sk-or-\""
+    "message": "Formato de chave API inválido"
   },
   "statusSaved": {
     "message": "Configurações salvas com sucesso"

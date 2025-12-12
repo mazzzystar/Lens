@@ -8,20 +8,17 @@
   "tagline": {
     "message": "ノイズを見抜き、真実を見る"
   },
+  "labelProvider": {
+    "message": "プロバイダー"
+  },
   "labelModel": {
     "message": "AIモデル"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro（デフォルト）"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter APIキー"
+    "message": "APIキー"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "APIキーを入力"
   },
   "labelThinking": {
     "message": "深い思考"
@@ -51,7 +48,7 @@
     "message": "APIキーを入力してください"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter APIキーは \"sk-or-\" で始まる必要があります"
+    "message": "APIキーの形式が無効です"
   },
   "statusSaved": {
     "message": "設定を保存しました"

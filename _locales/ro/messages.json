@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Vezi prin zgomot către adevăr"
   },
+  "labelProvider": {
+    "message": "Furnizor"
+  },
   "labelModel": {
     "message": "Model AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Implicit)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "Cheie API OpenRouter"
+    "message": "Cheie API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Introdu cheia API"
   },
   "labelThinking": {
     "message": "Gândire profundă"
@@ -51,7 +48,7 @@
     "message": "Te rugăm să introduci o cheie API"
   },
   "errorInvalidApiKey": {
-    "message": "Cheile API OpenRouter trebuie să înceapă cu \"sk-or-\""
+    "message": "Format cheie API invalid"
   },
   "statusSaved": {
     "message": "Setări salvate cu succes"

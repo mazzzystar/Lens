@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Makita ang katotohanan sa kabila ng ingay"
   },
+  "labelProvider": {
+    "message": "Provider"
+  },
   "labelModel": {
     "message": "Modelo ng AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Default)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API Key"
+    "message": "API Key"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Ilagay ang iyong API key"
   },
   "labelThinking": {
     "message": "Malalim na Pag-iisip"
@@ -51,7 +48,7 @@
     "message": "Mangyaring maglagay ng API key"
   },
   "errorInvalidApiKey": {
-    "message": "Ang mga OpenRouter API key ay dapat magsimula sa \"sk-or-\""
+    "message": "Hindi valid ang format ng API key"
   },
   "statusSaved": {
     "message": "Matagumpay na nai-save ang mga setting"

@@ -8,20 +8,17 @@
   "tagline": {
     "message": "গোলমালের মধ্য দিয়ে সত্য দেখুন"
   },
+  "labelProvider": {
+    "message": "প্রদানকারী"
+  },
   "labelModel": {
     "message": "AI মডেল"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (ডিফল্ট)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API কী"
+    "message": "API কী"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "আপনার API কী প্রবেশ করুন"
   },
   "labelThinking": {
     "message": "গভীর চিন্তা"
@@ -51,7 +48,7 @@
     "message": "অনুগ্রহ করে একটি API কী প্রবেশ করান"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API কী \"sk-or-\" দিয়ে শুরু হওয়া উচিত"
+    "message": "অবৈধ API কী ফরম্যাট"
   },
   "statusSaved": {
     "message": "সেটিংস সফলভাবে সংরক্ষিত হয়েছে"

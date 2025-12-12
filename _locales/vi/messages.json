@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Nhìn xuyên qua tiếng ồn đến sự thật"
   },
+  "labelProvider": {
+    "message": "Nhà cung cấp"
+  },
   "labelModel": {
     "message": "Mô hình AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Mặc định)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "Khóa API OpenRouter"
+    "message": "Khóa API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Nhập khóa API của bạn"
   },
   "labelThinking": {
     "message": "Suy nghĩ sâu"
@@ -51,7 +48,7 @@
     "message": "Vui lòng nhập khóa API"
   },
   "errorInvalidApiKey": {
-    "message": "Khóa API OpenRouter phải bắt đầu bằng \"sk-or-\""
+    "message": "Định dạng khóa API không hợp lệ"
   },
   "statusSaved": {
     "message": "Đã lưu cài đặt thành công"

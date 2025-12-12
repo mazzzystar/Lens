@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Näe melun läpi totuuteen"
   },
+  "labelProvider": {
+    "message": "Tarjoaja"
+  },
   "labelModel": {
     "message": "AI-malli"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Oletus)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API-avain"
+    "message": "API-avain"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Syötä API-avaimesi"
   },
   "labelThinking": {
     "message": "Syvä ajattelu"
@@ -51,7 +48,7 @@
     "message": "Anna API-avain"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API-avainten on alettava \"sk-or-\""
+    "message": "Virheellinen API-avaimen muoto"
   },
   "statusSaved": {
     "message": "Asetukset tallennettu"

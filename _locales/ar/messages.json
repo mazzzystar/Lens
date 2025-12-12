@@ -8,20 +8,17 @@
   "tagline": {
     "message": "انظر عبر الضوضاء إلى الحقيقة"
   },
+  "labelProvider": {
+    "message": "المزود"
+  },
   "labelModel": {
     "message": "نموذج الذكاء الاصطناعي"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (افتراضي)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "مفتاح API لـ OpenRouter"
+    "message": "مفتاح API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "أدخل مفتاح API"
   },
   "labelThinking": {
     "message": "التفكير العميق"
@@ -51,7 +48,7 @@
     "message": "الرجاء إدخال مفتاح API"
   },
   "errorInvalidApiKey": {
-    "message": "يجب أن تبدأ مفاتيح API الخاصة بـ OpenRouter بـ \"sk-or-\""
+    "message": "تنسيق مفتاح API غير صالح"
   },
   "statusSaved": {
     "message": "تم حفظ الإعدادات بنجاح"

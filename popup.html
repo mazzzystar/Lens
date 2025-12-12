@@ -241,16 +241,24 @@
   </div>
 
   <div class="form-group">
-    <label for="model" data-i18n="labelModel">AI Model</label>
-    <select id="model">
-      <option value="gemini-3-pro" data-i18n="modelGemini">Gemini 3 Pro (Default)</option>
-      <option value="claude-4-opus" data-i18n="modelClaude">Claude 4 Opus</option>
+    <label for="provider" data-i18n="labelProvider">Provider</label>
+    <select id="provider">
+      <option value="openrouter">OpenRouter</option>
+      <option value="deepseek">DeepSeek</option>
+      <option value="openai">OpenAI</option>
     </select>
   </div>
 
   <div class="form-group">
-    <label for="apiKey" data-i18n="labelApiKey">OpenRouter API Key</label>
-    <input type="password" id="apiKey" data-i18n-placeholder="placeholderApiKey" placeholder="sk-or-v1-...">
+    <label for="model" data-i18n="labelModel">AI Model</label>
+    <select id="model">
+      <!-- Options populated dynamically based on provider -->
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="apiKey" data-i18n="labelApiKey">API Key</label>
+    <input type="password" id="apiKey" data-i18n-placeholder="placeholderApiKey" placeholder="Enter your API key">
   </div>
 
   <div class="toggle-group">
@@ -308,7 +316,7 @@
   <div class="instructions">
     <h3 data-i18n="instructionsTitle">How to use</h3>
     <p data-i18n="instructionsText">Select any text on a webpage, right-click, and choose <code>💡 Lens</code> to get instant insight.</p>
-    <p class="api-link" data-i18n="apiLinkText">Get your API key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
+    <p class="api-link" id="apiLinkText">Get your API key at <a id="apiLink" href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a></p>
   </div>
 
   <script src="popup.js"></script>

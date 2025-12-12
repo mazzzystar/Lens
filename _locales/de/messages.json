@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Durch den Lärm zur Wahrheit sehen"
   },
+  "labelProvider": {
+    "message": "Anbieter"
+  },
   "labelModel": {
     "message": "KI-Modell"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Standard)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API-Schlüssel"
+    "message": "API-Schlüssel"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "API-Schlüssel eingeben"
   },
   "labelThinking": {
     "message": "Tiefes Denken"
@@ -51,7 +48,7 @@
     "message": "Bitte geben Sie einen API-Schlüssel ein"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API-Schlüssel müssen mit \"sk-or-\" beginnen"
+    "message": "Ungültiges API-Schlüssel-Format"
   },
   "statusSaved": {
     "message": "Einstellungen erfolgreich gespeichert"

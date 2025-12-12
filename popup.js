@@ -1,23 +1,98 @@
 // Lens - Popup Script
-// Simple settings management for OpenRouter
+// Settings management for multiple AI providers
+
+// Provider configurations
+const PROVIDERS = {
+  openrouter: {
+    name: 'OpenRouter',
+    apiKeyPrefix: 'sk-or-',
+    apiKeyPlaceholder: 'sk-or-v1-...',
+    apiKeyUrl: 'https://openrouter.ai/keys',
+    apiKeyUrlText: 'openrouter.ai/keys',
+    models: [
+      { value: 'gemini-3-pro', label: 'Gemini 3 Pro' },
+      { value: 'gemini-2.5-pro', label: 'Gemini 2.5 Pro' },
+      { value: 'claude-4-opus', label: 'Claude 4 Opus' },
+      { value: 'claude-4-sonnet', label: 'Claude 4 Sonnet' }
+    ]
+  },
+  deepseek: {
+    name: 'DeepSeek',
+    apiKeyPrefix: 'sk-',
+    apiKeyPlaceholder: 'sk-...',
+    apiKeyUrl: 'https://platform.deepseek.com/api_keys',
+    apiKeyUrlText: 'platform.deepseek.com',
+    models: [
+      { value: 'deepseek-chat', label: 'DeepSeek Chat' }
+    ]
+  },
+  openai: {
+    name: 'OpenAI',
+    apiKeyPrefix: 'sk-',
+    apiKeyPlaceholder: 'sk-...',
+    apiKeyUrl: 'https://platform.openai.com/api-keys',
+    apiKeyUrlText: 'platform.openai.com',
+    models: [
+      { value: 'gpt-5.2', label: 'GPT-5.2' },
+      { value: 'gpt-5', label: 'GPT-5' }
+    ]
+  }
+};
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Apply i18n translations
   applyTranslations();
 
+  const providerSelect = document.getElementById('provider');
   const modelSelect = document.getElementById('model');
   const apiKeyInput = document.getElementById('apiKey');
   const enableThinkingCheckbox = document.getElementById('enableThinking');
   const languageSelect = document.getElementById('language');
   const saveBtn = document.getElementById('saveBtn');
   const statusDiv = document.getElementById('status');
+  const apiLink = document.getElementById('apiLink');
+  const apiLinkText = document.getElementById('apiLinkText');
+
+  // Update models when provider changes
+  function updateModels(provider) {
+    const providerConfig = PROVIDERS[provider];
+    modelSelect.innerHTML = '';
+
+    providerConfig.models.forEach((model, index) => {
+      const option = document.createElement('option');
+      option.value = model.value;
+      option.textContent = model.label;
+      if (index === 0) option.selected = true;
+      modelSelect.appendChild(option);
+    });
+
+    // Update API key placeholder and link
+    apiKeyInput.placeholder = providerConfig.apiKeyPlaceholder;
+    apiLink.href = providerConfig.apiKeyUrl;
+    apiLink.textContent = providerConfig.apiKeyUrlText;
+  }
+
+  // Provider change handler
+  providerSelect.addEventListener('change', () => {
+    updateModels(providerSelect.value);
+  });
 
   // Load saved settings
-  const config = await chrome.storage.sync.get(['apiKey', 'model', 'language', 'enableThinking']);
+  const config = await chrome.storage.sync.get(['apiKey', 'provider', 'model', 'language', 'enableThinking']);
 
+  // Set provider first (defaults to openrouter)
+  const savedProvider = config.provider || 'openrouter';
+  providerSelect.value = savedProvider;
+  updateModels(savedProvider);
+
+  // Then set model if it exists and is valid for this provider
   if (config.model) {
-    modelSelect.value = config.model;
+    const providerModels = PROVIDERS[savedProvider].models.map(m => m.value);
+    if (providerModels.includes(config.model)) {
+      modelSelect.value = config.model;
+    }
   }
+
   if (config.apiKey) {
     apiKeyInput.value = config.apiKey;
   }
@@ -30,6 +105,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Save settings
   saveBtn.addEventListener('click', async () => {
     const apiKey = apiKeyInput.value.trim();
+    const provider = providerSelect.value;
     const model = modelSelect.value;
     const language = languageSelect.value;
     const enableThinking = enableThinkingCheckbox.checked;
@@ -39,14 +115,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    // Basic validation for OpenRouter API key
-    if (!apiKey.startsWith('sk-or-')) {
-      showStatus('errorInvalidApiKey', 'error', 'OpenRouter API keys should start with "sk-or-"');
+    const providerConfig = PROVIDERS[provider];
+
+    // Basic validation for API key format
+    if (!apiKey.startsWith(providerConfig.apiKeyPrefix)) {
+      showStatus('errorInvalidApiKey', 'error',
+        `${providerConfig.name} API keys should start with "${providerConfig.apiKeyPrefix}"`);
       return;
     }
 
     try {
-      await chrome.storage.sync.set({ apiKey, model, language, enableThinking });
+      await chrome.storage.sync.set({ apiKey, provider, model, language, enableThinking });
       showStatus('statusSaved', 'success', 'Settings saved successfully');
     } catch (error) {
       showStatus('statusError', 'error', 'Failed to save settings');

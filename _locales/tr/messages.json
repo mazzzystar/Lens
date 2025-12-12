@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Gürültünün ötesinde gerçeği gör"
   },
+  "labelProvider": {
+    "message": "Sağlayıcı"
+  },
   "labelModel": {
     "message": "AI Modeli"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Varsayılan)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API Anahtarı"
+    "message": "API Anahtarı"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "API anahtarınızı girin"
   },
   "labelThinking": {
     "message": "Derin Düşünme"
@@ -51,7 +48,7 @@
     "message": "Lütfen bir API anahtarı girin"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API anahtarları \"sk-or-\" ile başlamalıdır"
+    "message": "Geçersiz API anahtarı formatı"
   },
   "statusSaved": {
     "message": "Ayarlar başarıyla kaydedildi"

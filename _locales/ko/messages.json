@@ -8,20 +8,17 @@
   "tagline": {
     "message": "소음을 꿰뚫어 진실을 보다"
   },
+  "labelProvider": {
+    "message": "제공자"
+  },
   "labelModel": {
     "message": "AI 모델"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (기본값)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API 키"
+    "message": "API 키"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "API 키 입력"
   },
   "labelThinking": {
     "message": "깊은 생각"
@@ -51,7 +48,7 @@
     "message": "API 키를 입력하세요"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API 키는 \"sk-or-\"로 시작해야 합니다"
+    "message": "잘못된 API 키 형식입니다"
   },
   "statusSaved": {
     "message": "설정이 저장되었습니다"

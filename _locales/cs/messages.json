@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Podívej se skrz hluk k pravdě"
   },
+  "labelProvider": {
+    "message": "Poskytovatel"
+  },
   "labelModel": {
     "message": "AI Model"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Výchozí)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API klíč"
+    "message": "API klíč"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Zadejte svůj API klíč"
   },
   "labelThinking": {
     "message": "Hluboké myšlení"
@@ -51,7 +48,7 @@
     "message": "Prosím zadejte API klíč"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API klíče musí začínat \"sk-or-\""
+    "message": "Neplatný formát API klíče"
   },
   "statusSaved": {
     "message": "Nastavení úspěšně uloženo"

@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Lihat menembus kebisingan menuju kebenaran"
   },
+  "labelProvider": {
+    "message": "Penyedia"
+  },
   "labelModel": {
     "message": "Model AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Default)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "Kunci API OpenRouter"
+    "message": "Kunci API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Masukkan kunci API Anda"
   },
   "labelThinking": {
     "message": "Pemikiran Mendalam"
@@ -51,7 +48,7 @@
     "message": "Silakan masukkan kunci API"
   },
   "errorInvalidApiKey": {
-    "message": "Kunci API OpenRouter harus dimulai dengan \"sk-or-\""
+    "message": "Format kunci API tidak valid"
   },
   "statusSaved": {
     "message": "Pengaturan berhasil disimpan"

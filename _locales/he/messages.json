@@ -8,20 +8,17 @@
   "tagline": {
     "message": "ראה דרך הרעש אל האמת"
   },
+  "labelProvider": {
+    "message": "ספק"
+  },
   "labelModel": {
     "message": "מודל AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (ברירת מחדל)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "מפתח API של OpenRouter"
+    "message": "מפתח API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "הזן את מפתח ה-API שלך"
   },
   "labelThinking": {
     "message": "חשיבה עמוקה"
@@ -51,7 +48,7 @@
     "message": "אנא הזן מפתח API"
   },
   "errorInvalidApiKey": {
-    "message": "מפתחות API של OpenRouter חייבים להתחיל ב-\"sk-or-\""
+    "message": "פורמט מפתח API לא תקין"
   },
   "statusSaved": {
     "message": "ההגדרות נשמרו בהצלחה"

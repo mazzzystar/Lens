@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Se genom bruset till sanningen"
   },
+  "labelProvider": {
+    "message": "Leverantör"
+  },
   "labelModel": {
     "message": "AI-modell"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Standard)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API-nyckel"
+    "message": "API-nyckel"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Ange din API-nyckel"
   },
   "labelThinking": {
     "message": "Djupt tänkande"
@@ -51,7 +48,7 @@
     "message": "Vänligen ange en API-nyckel"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API-nycklar måste börja med \"sk-or-\""
+    "message": "Ogiltigt API-nyckelformat"
   },
   "statusSaved": {
     "message": "Inställningar sparade"

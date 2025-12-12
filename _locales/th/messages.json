@@ -8,20 +8,17 @@
   "tagline": {
     "message": "มองทะลุเสียงรบกวนไปสู่ความจริง"
   },
+  "labelProvider": {
+    "message": "ผู้ให้บริการ"
+  },
   "labelModel": {
     "message": "โมเดล AI"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (ค่าเริ่มต้น)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "คีย์ API ของ OpenRouter"
+    "message": "คีย์ API"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "ใส่คีย์ API ของคุณ"
   },
   "labelThinking": {
     "message": "การคิดเชิงลึก"
@@ -51,7 +48,7 @@
     "message": "กรุณาใส่คีย์ API"
   },
   "errorInvalidApiKey": {
-    "message": "คีย์ API ของ OpenRouter ต้องเริ่มต้นด้วย \"sk-or-\""
+    "message": "รูปแบบคีย์ API ไม่ถูกต้อง"
   },
   "statusSaved": {
     "message": "บันทึกการตั้งค่าสำเร็จ"

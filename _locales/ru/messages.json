@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Смотри сквозь шум к истине"
   },
+  "labelProvider": {
+    "message": "Провайдер"
+  },
   "labelModel": {
     "message": "Модель ИИ"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (По умолчанию)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "API-ключ OpenRouter"
+    "message": "API-ключ"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Введите API-ключ"
   },
   "labelThinking": {
     "message": "Глубокое мышление"
@@ -51,7 +48,7 @@
     "message": "Пожалуйста, введите API-ключ"
   },
   "errorInvalidApiKey": {
-    "message": "API-ключи OpenRouter должны начинаться с \"sk-or-\""
+    "message": "Неверный формат API-ключа"
   },
   "statusSaved": {
     "message": "Настройки успешно сохранены"

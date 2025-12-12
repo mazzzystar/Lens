@@ -8,20 +8,17 @@
   "tagline": {
     "message": "透过噪音，看见真相"
   },
+  "labelProvider": {
+    "message": "服务商"
+  },
   "labelModel": {
     "message": "AI 模型"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro（默认）"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API 密钥"
+    "message": "API 密钥"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "输入您的 API 密钥"
   },
   "labelThinking": {
     "message": "深度思考"
@@ -51,7 +48,7 @@
     "message": "请输入 API 密钥"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API 密钥应以 \"sk-or-\" 开头"
+    "message": "API 密钥格式无效"
   },
   "statusSaved": {
     "message": "设置保存成功"

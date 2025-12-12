@@ -8,20 +8,17 @@
   "tagline": {
     "message": "Kijk door de ruis naar de waarheid"
   },
+  "labelProvider": {
+    "message": "Provider"
+  },
   "labelModel": {
     "message": "AI-model"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Standaard)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API-sleutel"
+    "message": "API-sleutel"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "Voer je API-sleutel in"
   },
   "labelThinking": {
     "message": "Diep nadenken"
@@ -51,7 +48,7 @@
     "message": "Voer een API-sleutel in"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API-sleutels moeten beginnen met \"sk-or-\""
+    "message": "Ongeldig API-sleutel formaat"
   },
   "statusSaved": {
     "message": "Instellingen succesvol opgeslagen"

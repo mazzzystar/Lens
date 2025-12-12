@@ -11,24 +11,20 @@
     "message": "See through the noise to the truth",
     "description": "Tagline shown in popup"
   },
+  "labelProvider": {
+    "message": "Provider",
+    "description": "Label for provider selector"
+  },
   "labelModel": {
     "message": "AI Model",
     "description": "Label for model selector"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (Default)",
-    "description": "Gemini model option"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus",
-    "description": "Claude model option"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API Key",
+    "message": "API Key",
     "description": "Label for API key input"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-...",
+    "message": "Enter your API key",
     "description": "Placeholder for API key input"
   },
   "labelThinking": {
@@ -68,7 +64,7 @@
     "description": "Error when no API key"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API keys should start with \"sk-or-\"",
+    "message": "Invalid API key format",
     "description": "Error for invalid API key format"
   },
   "statusSaved": {

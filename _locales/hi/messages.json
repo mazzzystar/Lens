@@ -8,20 +8,17 @@
   "tagline": {
     "message": "शोर के पार सच्चाई देखें"
   },
+  "labelProvider": {
+    "message": "प्रदाता"
+  },
   "labelModel": {
     "message": "AI मॉडल"
   },
-  "modelGemini": {
-    "message": "Gemini 3 Pro (डिफ़ॉल्ट)"
-  },
-  "modelClaude": {
-    "message": "Claude 4 Opus"
-  },
   "labelApiKey": {
-    "message": "OpenRouter API कुंजी"
+    "message": "API कुंजी"
   },
   "placeholderApiKey": {
-    "message": "sk-or-v1-..."
+    "message": "अपनी API कुंजी दर्ज करें"
   },
   "labelThinking": {
     "message": "गहन सोच"
@@ -51,7 +48,7 @@
     "message": "कृपया एक API कुंजी दर्ज करें"
   },
   "errorInvalidApiKey": {
-    "message": "OpenRouter API कुंजियाँ \"sk-or-\" से शुरू होनी चाहिए"
+    "message": "अमान्य API कुंजी प्रारूप"
   },
   "statusSaved": {
     "message": "सेटिंग्स सफलतापूर्वक सहेजी गईं"
