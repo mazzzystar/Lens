@@ -2,7 +2,9 @@
 
 **A Bicycle for the Mind in the Age of AI.**
 
-[中文版](README_CN.md) | [Download v0.0.3](https://github.com/mazzzystar/Lens/releases/download/v0.0.3/Lens-v0.0.3.zip)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ohhommiplfmgbkddllbljnooeblbhllf?style=for-the-badge&logo=googlechrome&logoColor=white&label=Chrome%20Web%20Store)](https://chromewebstore.google.com/detail/lens-ai-text-analyzer-ins/ohhommiplfmgbkddllbljnooeblbhllf)
+
+[中文版](README_CN.md)
 
 https://github.com/user-attachments/assets/b351933f-8226-42c4-bea6-04223e171e9a
 
@@ -10,7 +12,11 @@ For any statement on social media, select text, right-click "💡Lens", and get 
 
 ## Installation
 
-### Quick Install
+### Chrome Web Store (Recommended)
+
+Install directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/lens-ai-text-analyzer-ins/ohhommiplfmgbkddllbljnooeblbhllf).
+
+### Manual Install
 
 1. [Download the latest release](https://github.com/mazzzystar/Lens/releases/download/v0.0.3/Lens-v0.0.3.zip)
 2. Unzip the file

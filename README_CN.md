@@ -2,7 +2,9 @@
 
 **AI 时代的思维单车**
 
-[English](README.md) | [下载 v0.0.3](https://github.com/mazzzystar/Lens/releases/download/v0.0.3/Lens-v0.0.3.zip)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ohhommiplfmgbkddllbljnooeblbhllf?style=for-the-badge&logo=googlechrome&logoColor=white&label=Chrome%20商店)](https://chromewebstore.google.com/detail/lens-ai-text-analyzer-ins/ohhommiplfmgbkddllbljnooeblbhllf)
+
+[English](README.md)
 
 https://github.com/user-attachments/assets/547ff5ce-ffda-4ab1-8a40-4ceec01a584b
 
@@ -10,7 +12,11 @@ https://github.com/user-attachments/assets/547ff5ce-ffda-4ab1-8a40-4ceec01a584b
 
 ## 安装
 
-### 快速安装
+### Chrome 商店安装（推荐）
+
+直接从 [Chrome 应用商店](https://chromewebstore.google.com/detail/lens-ai-text-analyzer-ins/ohhommiplfmgbkddllbljnooeblbhllf) 安装。
+
+### 手动安装
 
 1. [下载最新版本](https://github.com/mazzzystar/Lens/releases/download/v0.0.3/Lens-v0.0.3.zip)
 2. 解压文件
